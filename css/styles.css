@@ -772,7 +772,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
   padding: 8px;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -813,13 +812,14 @@ body {
   font-size: 20px;
   line-height: 1.15;
   color: var(--title-text-color);
-  /* margin-bottom: 12px; */
+  margin-bottom: 12px;
 }
 
 .modal-field-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  position: relative;
 }
 .modal-field-container:first-child {
   margin-top: 12px;
@@ -836,12 +836,6 @@ body {
   margin-bottom: 4px;
 }
 
-.modal-field-name {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
 .modal-input-field {
   width: 448px;
   height: 40px;
@@ -856,6 +850,7 @@ body {
   cursor: text;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-input-field:hover,
 .modal-input-field:focus {
   border-color: var(--accent);
@@ -866,7 +861,6 @@ body {
   height: 12px;
   top: 50%;
   left: 12px;
-  transform: translateY(-50%);
   position: absolute;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -886,7 +880,6 @@ body {
   height: 13px;
   top: 50%;
   left: 12px;
-  transform: translateY(-50%);
   position: absolute;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -907,7 +900,6 @@ body {
   height: 12px;
   top: 50%;
   left: 12px;
-  transform: translateY(-50%);
   position: absolute;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -932,6 +924,13 @@ body {
   outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-comment-input::placeholder {
+  color: rgb(169, 169, 169);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-comment-input:hover,
